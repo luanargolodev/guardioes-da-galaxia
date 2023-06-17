@@ -5,6 +5,7 @@
 
 #images {
   position: absolute;
+  transition: all 0.8s;
 }
 
 #images img {
