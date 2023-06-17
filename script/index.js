@@ -49,4 +49,5 @@ function changeMenu() {
 
 function setMember(memberId) {
   changeMember(memberId)
+  changeMenu()
 }
