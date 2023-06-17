@@ -9,6 +9,7 @@ const members = [
 
 let activeMember = 0
 const images = document.getElementById('images')
+const memberName = document.getElementById('member__name')
 
 function navigationMember(direction) {
   activeMember += direction
@@ -16,7 +17,10 @@ function navigationMember(direction) {
 
   images.style.transform = `translateY(${-100 * activeMember}vh)`
 
+  memberName.classList = member.id
+
   changeStatusButtons()
+  changeName(member.name)
 }
 
 const btnPrev = document.getElementById('btn-prev')
