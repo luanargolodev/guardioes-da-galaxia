@@ -39,10 +39,12 @@ function changeStatusButtons() {
 }
 
 const menu = document.getElementById('menu')
+const navigation = document.getElementById('navigation')
 menu.addEventListener('click', changeMenu)
 
 function changeMenu() {
   menu.classList.toggle('active')
+  navigation.classList.toggle('active')
 }
 
 function setMember(memberId) {
