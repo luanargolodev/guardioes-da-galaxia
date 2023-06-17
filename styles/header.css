@@ -2,6 +2,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header > img {
+    width: 180px;
+  }
 }
 
 #menu {

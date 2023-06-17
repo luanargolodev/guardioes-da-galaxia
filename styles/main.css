@@ -4,12 +4,21 @@ main {
   flex-direction: column;
   row-gap: 12px;
   align-items: flex-end;
+
+  @media screen and (max-width: 1024px) {
+    align-items: center;
+    align-self: center;
+  }
 }
 
 main div {
   display: flex;
   align-items: center;
   column-gap: 12px;
+
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 20px;
+  }
 }
 
 main div button {
@@ -19,6 +28,11 @@ main div button {
   border-radius: 100%;
   border: 1px solid var(--text);
   transition: opacity 0.4s;
+
+  @media screen and (max-width: 1024px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 main div button:disabled {
@@ -36,6 +50,12 @@ main div button svg path {
   font-family: 'Star Guard Italic';
   color: transparent;
   padding-right: 10px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 64px;
+    text-align: center;
+    overflow: hidden;
+  }
 }
 
 #member__name.peter {
