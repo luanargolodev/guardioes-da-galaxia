@@ -11,8 +11,8 @@ let activeMember = 0
 const images = document.getElementById('images')
 const memberName = document.getElementById('member__name')
 
-function navigationMember(direction) {
-  activeMember += direction
+function changeMember(memberId) {
+  activeMember = memberId
   const member = members[activeMember]
 
   images.style.transform = `translateY(${-100 * activeMember}vh)`
@@ -21,6 +21,10 @@ function navigationMember(direction) {
 
   changeStatusButtons()
   changeName(member.name)
+}
+
+function navigationMember(direction) {
+  changeMember((activeMember += direction))
 }
 
 const btnPrev = document.getElementById('btn-prev')
@@ -39,4 +43,8 @@ menu.addEventListener('click', changeMenu)
 
 function changeMenu() {
   menu.classList.toggle('active')
+}
+
+function setMember(memberId) {
+  changeMember(memberId)
 }
