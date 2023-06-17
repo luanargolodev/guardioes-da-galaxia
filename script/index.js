@@ -15,6 +15,8 @@ function navigationMember(direction) {
   const member = members[activeMember]
 
   images.style.transform = `translateY(${-100 * activeMember}vh)`
+
+  changeStatusButtons()
 }
 
 const btnPrev = document.getElementById('btn-prev')
@@ -22,3 +24,8 @@ const btnNext = document.getElementById('btn-next')
 
 btnPrev.addEventListener('click', () => navigationMember(-1))
 btnNext.addEventListener('click', () => navigationMember(1))
+
+function changeStatusButtons() {
+  btnPrev.disabled = activeMember === 0
+  btnNext.disabled = activeMember === members.length - 1
+}
