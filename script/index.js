@@ -29,3 +29,10 @@ function changeStatusButtons() {
   btnPrev.disabled = activeMember === 0
   btnNext.disabled = activeMember === members.length - 1
 }
+
+const menu = document.getElementById('menu')
+menu.addEventListener('click', changeMenu)
+
+function changeMenu() {
+  menu.classList.toggle('active')
+}
